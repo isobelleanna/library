@@ -1,17 +1,20 @@
 package org.example;
 
+
 public class HomeCommands extends Commands{
-    public HomeCommands() {
+
+
+    public HomeCommands()  {
         super(new String[]{"Books available", "Loan", "Reports", "Quit"}, "home");
     }
 
     @Override
-    public void run() {
+    public void run()  {
         printGreeting("the library");
         printCommands();
         int userInput = getCommandInput();
         if(userInput == 1){
-            printMessage("Books available");
+           printMessage("books available");
         } else if (userInput == 2) {
             printMessage("Loan");
         }
