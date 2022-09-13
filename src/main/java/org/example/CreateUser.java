@@ -25,11 +25,15 @@ public class CreateUser extends Commands{
             String isStudent = scanner.next();
             if (Objects.equals(isStudent, "y")) {
                 user = new User(username, UserStatus.STUDENT, password);
+                printMessage(user + "");
+                setNextCommands("home");
             } else {
                 user = new User(username, UserStatus.ADMIN, password);
+                printMessage(user + "");
+                setNextCommands("admin");
             }
-            printMessage(user + "");
-            setNextCommands("home");
+
+
         } else {
             setNextCommands("home");
         }

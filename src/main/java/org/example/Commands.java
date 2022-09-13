@@ -10,7 +10,7 @@ public abstract class Commands {
         this.commands = commands;
         this.nextCommands = nextCommands;
     }
-    abstract public void run();
+    abstract public void run() throws Exception;
 
     public String getNextCommands() {
         return nextCommands;
